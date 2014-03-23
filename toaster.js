@@ -62,7 +62,7 @@ function ($compile, $timeout, $sce, toasterConfig, toaster) {
         link: function (scope, elm, attrs) {
 
             var id = 0,
-                mergedConfig;
+                mergedConfig = toasterConfig;
 
             if (attrs.toasterOptions) {
                 mergedConfig = angular.extend({}, toasterConfig, scope.$eval(attrs.toasterOptions));
